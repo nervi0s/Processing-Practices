@@ -1,6 +1,11 @@
-void setup () {
+void setup () { // This runs only once
  
   size(680, 500); // Canvas size
+  
+}
+
+void draw(){ // This runs in a infinite loop
+  
   randomPoints(300, 300, 50, 100);
   
 }
