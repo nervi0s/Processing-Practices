@@ -25,7 +25,6 @@ void draw() {
    println(bubbles[1].y);*/
 
   for (int i = 0; i < bubbles.length; i++) {
-    println(i);
     bubbles[i].display();
     bubbles[i].ascend();
     bubbles[i].top();
