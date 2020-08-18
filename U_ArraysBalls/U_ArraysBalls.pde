@@ -1,11 +1,11 @@
-Ball [] balls = new Ball [3];
+Ball [] balls = new Ball [5];
 Collision col;
 
 void setup() {
   size(720, 480);
 
   for (int i = 0; i < balls.length; i++) {
-    balls[i] = new Ball(35);
+    balls[i] = new Ball(50);
   }
   
   col = new Collision(balls);
