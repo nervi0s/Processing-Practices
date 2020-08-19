@@ -8,15 +8,25 @@ class Ball {
 
   Ball(float asignedDiameter) {
     diameter = asignedDiameter;
-    x = random(diameter, width - diameter);
-    y = random(diameter, height - diameter);
+    x = random(diameter/2, width - diameter/2);
+    y = random(diameter/2, height - diameter/2);
+    speedX = 2;
+    speedY = 2;
+    deafultColor = color (255, 0, 0);
+  }
+
+  Ball(float asignedX, float asignedY, float asignedDiameter) {
+    x = asignedX;
+    y = asignedY;
+    diameter = asignedDiameter;
     speedX = 2;
     speedY = 2;
     deafultColor = color (255, 0, 0);
   }
 
   void display() {
-    stroke(255);
+    stroke(200);
+    strokeWeight(1.5);
     fill(deafultColor);
 
     ellipse(x, y, diameter, diameter);
@@ -35,7 +45,6 @@ class Ball {
       speedY = - speedY;
     }
   }
-
   /*void checkCollison(Ball other) {
     float distance = dist(x, y, other.x, other.y);
     if (diameter/2 + other.diameter/2 >= distance) {

@@ -1,14 +1,14 @@
-Ball [] balls = new Ball [5];
-Collision col;
+Ball [] balls = new Ball [9];
+Collision collisionChecker;
 
 void setup() {
   size(720, 480);
 
   for (int i = 0; i < balls.length; i++) {
-    balls[i] = new Ball(50);
+    balls[i] = new Ball(80);
   }
-  
-  col = new Collision(balls);
+
+  collisionChecker = new Collision(balls);
 }
 
 void draw() {
@@ -19,6 +19,6 @@ void draw() {
     balls[i].bound();
     balls[i].checkEdge();
   }
-  
-  col.checkCollison();
+
+  collisionChecker.checkCollison();
 }
